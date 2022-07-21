@@ -22,7 +22,6 @@ main {
 .main-banner {
     height: 620px;
     width: 1321px;
-    left: 140px;
     margin-top: 20px;
     margin-bottom: 130px;
     border: 1px solid salmon;
@@ -34,8 +33,7 @@ main {
 }
 
 .banner-info-img {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     align-items: center;
 
 }
@@ -65,11 +63,16 @@ main {
 .button-info {
     color: white;
     width: 150px;
-    height: 40px;
+    height: 50px;
     border-radius: 5px;
     background-color: red;
     margin-top: 25px;
     border: none;
+}
+
+.button-info a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .fa-angle-right {
@@ -104,8 +107,21 @@ main {
 .button {
     width: 312px;
     height: 312px;
-    background-color: #161616;
     border-radius: 10px;
+    background-color: #161616;
+
+}
+
+.button-hidden {
+    width: 100%;
+    height: 252px;
+    padding: 5px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
 }
 
 .button-option {
@@ -128,19 +144,33 @@ main {
 }
 
 .button-1 a {
-
+    color: black;
     text-decoration: none;
+}
+
+.button-2 a {
+    color: black;
+    text-decoration: none;
+}
+
+.button-3 a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .button-1,
 .button-2 {
-    color: black;
     background-color: #FFFFFF;
 }
 
 .button-3 {
-    color: #FFFFFF;
     background-color: red;
+}
+
+.button-3-home a {
+    color: white;
+    text-decoration: none;
+
 }
 
 /*-------------------------------------
@@ -176,6 +206,11 @@ main {
     border: 1px solid #161616;
 }
 
+.transfer-button a {
+    text-decoration: none;
+    color: black;
+}
+
 .icon-flex {
     display: flex;
     flex-direction: row;
@@ -188,10 +223,21 @@ main {
     padding-right: 10px;
 }
 
+.view-button {
+    width: 150px;
+    height: 65px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.view-button a {
+    font-size: 20px;
+}
+
 /* Goal sectio or footer section */
 .main-footer {
     width: 100%;
-    height: 444px;
     color: white;
     background-color: #161616;
     text-align: center;
@@ -204,7 +250,6 @@ h2 {
 
 hr {
     width: 900px;
-    height: 0px;
     margin-top: 70px;
     padding-left: 130px;
     padding-right: 130px;
@@ -212,19 +257,18 @@ hr {
 }
 
 .goal-conatin {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .goal-info {
     width: 898px;
-    height: 24px;
     margin-top: 25px;
     margin-bottom: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 310px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: space-between;
 }
 
@@ -281,19 +325,79 @@ hr {
 }
 
 @media only screen and (max-width: 680px) {
-    main {
-        text-decoration: column;
-        text-align: center;
+    .main-banner {
+        width: 100%;
+        height: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .banner-info-img {
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .banner-info {
+        padding-left: 15px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-info {
+        margin-left: 180px;
+    }
+
+    .container,
+    .main-footer {
+        width: 100%;
+    }
+
+    .button-hidden {
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .banner-image img {
+        width: 100%;
     }
 
     .banner-info {
         width: 100%;
     }
 
+    main {
+        position: relative;
+        width: 100%;
+    }
+
+    .button-2,
+    .button-3 {
+        margin-left: 26px;
+        width: 200px;
+        height: 64px;
+    }
+
+    .button {
+        background-color: #FFFFFF;
+    }
+
     .banner-info-img {
         grid-template-columns: repeat(1, 1fr);
-        background-color: antiquewhite;
-        width: 100%;
+
+
     }
 
     .container {
@@ -303,28 +407,88 @@ hr {
 
     .indivisual-win-momment {
         grid-template-columns: repeat(1, 1fr);
-        background-color: aqua;
         width: 100%;
     }
 
+    .view-button-section {
+        display: none;
+    }
 
+    .main-footer {
+        width: 100%;
+    }
+
+    .goal-info {
+        margin-left: 0px;
+        padding-left: 0px;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+
+    }
+
+    .social-icon {
+        margin-left: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .social-icon a {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
 }
 
 @media only screen and (min-width:681px) and (max-width:992px) {
     .indivisual-win-momment {
         grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .button-hidden {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .container-two {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
     }
 
     .main-banner {
-        text-decoration: row;
         width: 100%;
+        height: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .banner-info-img {
+        width: 100%;
+
+    }
+
+    .banner-info {
+        padding-left: 60px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        height: 100%;
     }
 
     /* .banner-info {
         width: 100%;
-    }
-*/
-    .banner-image img {
+    } */
+
+    /* .banner-image img {
+        width: 100%;
+    } */
+
+    main {
         width: 100%;
     }
 
@@ -333,9 +497,86 @@ hr {
         width: 100%;
     }
 
+    .button {
+        display: none;
+    }
+
     .button-option {
-        grid-template-rows: repeat(1, 1fr);
+        display: none;
+    }
+
+    .main-footer {
+        width: 100%;
+    }
+
+    .goal-info {
+        /* margin-left: 0px;
+        padding-left: 0px;
+        grid-template-columns: repeat(1, 1fr); */
+        width: 100%;
+        margin-left: 0px;
 
     }
 
+    .social-icon {
+        margin-left: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .social-icon a {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1800px) {
+
+
+    .banner-info-img {
+        width: 100%;
+
+    }
+
+    .banner-info {
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-option {
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-hidden {
+        display: none;
+    }
+
+    .view-button-section {
+        display: none;
+    }
+
+    .main-footer {
+        width: 100%;
+    }
+
+    .goal-info {
+        /* margin-left: 0px;
+        padding-left: 0px;
+        grid-template-columns: repeat(1, 1fr); */
+        width: 100%;
+        margin-left: 0px;
+
+    }
+
+    .social-icon {
+        margin-left: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .social-icon a {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
 }
